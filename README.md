@@ -14,7 +14,8 @@
 | 1 | **topic-to-idea** | `"以'XXX'为议题生成一个研究设想"` | 从政策议题到300字研究设想（固定五句结构） |
 | 2 | **idea-to-perspective** | `"请用 idea-to-perspective skill 为我的选题寻找理论视角"` | 选题解构→学者著作推荐→读书报告任务（防模式化） |
 | 3 | **perspective-to-literature** | `"请用 perspective-to-literature skill 写文献综述"` | 双语搜索→竞争性假设→2000-3000字批判性文献综述 |
-| 4 | **scholar-question** | `"请用 scholar-question skill 诊断我的选题"` | 基于张静《学会提问》评估选题质量 |
+| 4 | **literature-to-design** | `"请用 literature-to-design skill 设计研究方案"` | 从文献综述到课题申报活页格式的研究设计（本科生可执行） |
+| 5 | **scholar-question** | `"请用 scholar-question skill 诊断我的选题"` | 基于张静《学会提问》评估选题质量 |
 
 ### 完整 Scholar 学术工作流（11个）
 
@@ -83,6 +84,8 @@ kimi-skills/
 │   └── references/
 │       ├── chinese-search-guide.md
 │       └── critical-synthesis-guide.md
+├── literature-to-design/                # 从文献综述到研究设计方案
+│   └── SKILL.md
 └── ...（其余scholar系列skill由系统自动管理）
 ```
 
@@ -165,7 +168,8 @@ Step 4: 学生撰写 500-800 字读书报告
 1. topic-to-idea → 确定研究问题和角度
 2. idea-to-perspective → 通过经典阅读为选题锚定理论视角
 3. perspective-to-literature → 双语搜索文献，提出竞争性假设，撰写批判性综述
-4. scholar-causal → 构建DAG和因果策略
+4. literature-to-design → 将综述与假设转化为课题申报/开题报告格式的研究设计（本科生可执行）
+5. scholar-causal → 构建DAG和因果策略
 5. scholar-design → 设计研究和预分析计划
 6. scholar-analyze → 跑数据分析和可视化
 7. scholar-write → 写 Results 和 Discussion
@@ -177,7 +181,8 @@ Step 4: 学生撰写 500-800 字读书报告
 1. scholar-idea → 发现经验谜题
 2. idea-to-perspective → 通过经典阅读锚定理论视角
 3. perspective-to-literature → 双语搜索文献，提出竞争性假设，撰写批判性综述
-4. scholar-conceptual → 构建原创理论框架
+4. literature-to-design → 将综述与假设转化为本科生可执行的研究设计
+5. scholar-conceptual → 构建原创理论框架
 4. scholar-hypothesis → 从理论推导假设
 5. scholar-design → 设计验证研究
 6. scholar-analyze → 实证检验
@@ -206,6 +211,8 @@ scholar-polish → SCAN（诊断问题）→ REWRITE/FULL（修复）
 ├── perspective-to-literature/
 │   ├── SKILL.md
 │   └── references/
+├── literature-to-design/
+│   └── SKILL.md
 ├── scholar-idea/
 │   └── SKILL.md
 ├── scholar-lit-review-hypothesis/
@@ -242,4 +249,8 @@ scholar-polish → SCAN（诊断问题）→ REWRITE/FULL（修复）
 - Skill 之间存在**调用依赖关系**（如 scholar-analyze 建议先调用 scholar-causal）
 - 大型任务建议**分阶段调用**，不要一次串连过多 Skill
 - 调用时请明确告知**目标期刊**（如 ASR/AJS/Demography/Social Policy & Administration），Skill 会自动调整输出格式
-- `topic-to-idea`、`idea-to-perspective` 与 `perspective-to-literature` 为**教学专用配套**：前者解决"从议题到合格提案"，中者解决"从合格提案到差异化视角"，后者解决"从差异化视角到批判性文献综述"
+- `topic-to-idea`、`idea-to-perspective`、`perspective-to-literature` 与 `literature-to-design` 为**教学专用配套**：
+  - `topic-to-idea` 解决"从议题到合格提案"
+  - `idea-to-perspective` 解决"从合格提案到差异化视角"
+  - `perspective-to-literature` 解决"从差异化视角到批判性文献综述"
+  - `literature-to-design` 解决"从批判性文献综述到可执行的研究设计方案"
