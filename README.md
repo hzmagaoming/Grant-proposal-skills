@@ -1,13 +1,11 @@
-# KimiCode Skills 索引与使用指南
+# KimiCode Skills：教学 Skill 流水线
 
-> 本仓库包含一套为社会科学教学与研究设计的 Kimi Code Skills，覆盖从选题构思到发表准备的完整论文生产流水线。
+> 一套为社会科学教学设计的 Kimi Code Skills，覆盖从政策议题到课题申报活页的完整研究提案生产流水线。
 > 实际存放位置：`~/.config/agents/skills/`（用户级，全局可用）
 
 ---
 
 ## Skill 清单
-
-### 教学配套 Skills
 
 | # | Skill | 触发方式 | 核心用途 |
 |---|-------|----------|----------|
@@ -16,51 +14,24 @@
 | 3 | **perspective-to-literature** | `"请用 perspective-to-literature skill 写文献综述"` | 双语搜索→竞争性假设→2000-3000字批判性文献综述 |
 | 4 | **literature-to-design** | `"请用 literature-to-design skill 设计研究方案"` | 从文献综述到课题申报活页格式的研究设计（本科生可执行） |
 | 5 | **proposal-writing** | `"请用 proposal-writing skill 写开题报告"` | 整合选题说明+读书报告+文献综述+研究设计为完整活页 |
-| 6 | **scholar-question** | `"请用 scholar-question skill 诊断我的选题"` | 基于张静《学会提问》评估选题质量 |
 
-### 完整 Scholar 学术工作流（11个）
+---
+
+## 使用流程
 
 ```
-Phase 1: 选题与构思
-    topic-to-idea / scholar-idea / scholar-question
+政策议题/经验现象
     ↓
-Phase 2: 文献与理论
-    idea-to-perspective
-    perspective-to-literature
-    scholar-lit-review-hypothesis
-    scholar-conceptual
-    scholar-hypothesis
+1. topic-to-idea → 300字选题说明
     ↓
-Phase 3: 因果与设计
-    scholar-causal
-    scholar-design
+2. idea-to-perspective → 读书报告（经典阅读锚定理论视角）
     ↓
-Phase 4: 数据分析
-    scholar-analyze
-    scholar-qual
+3. perspective-to-literature → 批判性文献综述（含假设选择）
     ↓
-Phase 5: 写作与润色
-    scholar-write
-    scholar-polish
+4. literature-to-design → 研究设计（3.1 研究内容 + 3.2 创新之处）
     ↓
-Phase 6: 发表准备
-    scholar-replication
+5. proposal-writing → 完整课题申报活页/开题报告
 ```
-
-| # | Skill | 触发方式 | 核心用途 |
-|---|-------|----------|----------|
-| 4 | **scholar-idea** | `"请用 scholar-idea skill 探索：..."` | 选题构思、研究问题打磨、多智能体评审 |
-| 5 | **scholar-lit-review-hypothesis** | `"请用 scholar-lit-review-hypothesis skill 处理：..."` | 系统文献综述 + 理论框架 + 假设推导 |
-| 6 | **scholar-conceptual** | `"请用 scholar-conceptual skill：[theorize|diagram] ..."` | 原创理论构建、概念图生成 |
-| 7 | **scholar-hypothesis** | `"请用 scholar-hypothesis skill：..."` | 深化假设开发、理论选择、期刊定制草稿 |
-| 8 | **scholar-causal** | `"请用 scholar-causal skill：..."` | DAG构建、因果识别策略选择与论证 |
-| 9 | **scholar-design** | `"请用 scholar-design skill：[quant|qual|mixed|experiment] ..."` | 研究设计、功效分析、预分析计划 |
-| 10 | **scholar-analyze** | `"请用 scholar-analyze skill：..."` | 数据分析、发表级表格与可视化 |
-| 11 | **scholar-qual** | `"请用 scholar-qual skill：[codebook|thematic|content|llm-coding] ..."` | 定性编码、主题分析、混合方法 |
-| 12 | **scholar-write** | `"请用 scholar-write skill：[draft|revise|polish] ..."` | 论文各章节写作 |
-| 13 | **scholar-polish** | `"请用 scholar-polish skill：[SCAN|REWRITE|FULL] ..."` | 学术写作润色、风格个性化 |
-| 14 | **scholar-replication** | `"请用 scholar-replication skill：[BUILD|DOCUMENT|TEST] ..."` | 复制包构建与验证 |
-| 15 | **scholar-think-tank** | `"请用 scholar-think-tank skill：..."` | 智库咨政报告撰写 |
 
 ---
 
@@ -68,7 +39,7 @@ Phase 6: 发表准备
 
 ```
 kimi-skills/
-├── README.md                          # 本文件（索引与指南）
+├── README.md                          # 本文件
 ├── topic-to-idea/                     # 从议题到300字研究设想
 │   ├── SKILL.md
 │   └── references/
@@ -80,23 +51,22 @@ kimi-skills/
 │   └── references/
 │       ├── book-review-framework.md
 │       └── scholar-book-pool.md
-├── perspective-to-literature/           # 从理论视角到批判性文献综述
+├── perspective-to-literature/         # 从理论视角到批判性文献综述
 │   ├── SKILL.md
 │   └── references/
 │       ├── chinese-search-guide.md
 │       └── critical-synthesis-guide.md
-├── literature-to-design/                # 从文献综述到研究设计方案
+├── literature-to-design/              # 从文献综述到研究设计方案
 │   └── SKILL.md
-├── proposal-writing/                    # 整合材料为完整课题申报活页
-│   └── SKILL.md
-└── ...（其余scholar系列skill由系统自动管理）
+└── proposal-writing/                  # 整合材料为完整课题申报活页
+    └── SKILL.md
 ```
 
 ---
 
 ## topic-to-idea：从议题到300字研究设想
 
-原始需求来自国家社会科学基金课题申报场景。将官方政策议题转化为**具体的、可操作的、有理论深度的**研究问题。
+将官方政策议题转化为**具体的、可操作的、有理论深度的**研究问题。
 
 ### 核心设计：固定五句结构
 
@@ -164,101 +134,83 @@ Step 4: 学生撰写 500-800 字读书报告
 
 ---
 
-## 典型使用场景
+## perspective-to-literature：从理论视角到批判性文献综述
 
-### 场景 A：从零开始写一篇定量论文
-```
-1. topic-to-idea → 确定研究问题和角度
-2. idea-to-perspective → 通过经典阅读为选题锚定理论视角
-3. perspective-to-literature → 双语搜索文献，提出竞争性假设，撰写批判性综述
-4. literature-to-design → 将综述与假设转化为课题申报/开题报告格式的研究设计（本科生可执行）
-5. proposal-writing → 整合所有材料为完整课题申报活页/开题报告
-6. scholar-causal → 构建DAG和因果策略
-5. scholar-design → 设计研究和预分析计划
-6. scholar-analyze → 跑数据分析和可视化
-7. scholar-write → 写 Results 和 Discussion
-8. scholar-replication → 打包复制材料
-```
+### 定位
 
-### 场景 B：理论驱动型论文
-```
-1. scholar-idea → 发现经验谜题
-2. idea-to-perspective → 通过经典阅读锚定理论视角
-3. perspective-to-literature → 双语搜索文献，提出竞争性假设，撰写批判性综述
-4. literature-to-design → 将综述与假设转化为本科生可执行的研究设计
-5. proposal-writing → 整合所有材料为完整课题申报活页/开题报告
-5. scholar-conceptual → 构建原创理论框架
-4. scholar-hypothesis → 从理论推导假设
-5. scholar-design → 设计验证研究
-6. scholar-analyze → 实证检验
-7. scholar-write → 写作输出
-```
+idea-to-perspective 的**下游配套工具**。在学生完成读书报告、选定理论视角后，通过**双语搜索**构建批判性文献综述，提出竞争性假设。
 
-### 场景 C：已有初稿，需要润色
-```
-scholar-polish → SCAN（诊断问题）→ REWRITE/FULL（修复）
-```
+### 核心设计
+
+- **中文文献 ≥60%**：优先检索中文核心期刊
+- **6-bin 文献地图**：已确立发现、争议发现、缺失发现、提出机制、方法论图景、解释缺口
+- **3 个竞争性假设**：H1（浅/高可行性）、H2（中）、H3（深/低可行性），由用户选择
+- **2000-3000 字批判性综述**：非罗列式，而是问题驱动的论证式写作
+
+### 使用方式
+
+> "请用 perspective-to-literature skill 写文献综述"
+
+Kimi 会自动读取读书报告内容，执行13轮双语搜索，构建文献地图，提出假设，撰写综述。
 
 ---
 
-## Skill 存放规范
+## literature-to-design：从文献综述到研究设计
 
-**全局 Skill 目录**：`~/.config/agents/skills/`
+### 定位
 
-```
-~/.config/agents/skills/
-├── topic-to-idea/
-│   ├── SKILL.md
-│   └── references/
-├── idea-to-perspective/
-│   ├── SKILL.md
-│   └── references/
-├── perspective-to-literature/
-│   ├── SKILL.md
-│   └── references/
-├── literature-to-design/
-│   └── SKILL.md
-├── proposal-writing/
-│   └── SKILL.md
-├── scholar-idea/
-│   └── SKILL.md
-├── scholar-lit-review-hypothesis/
-│   └── SKILL.md
-├── scholar-conceptual/
-│   └── SKILL.md
-├── scholar-hypothesis/
-│   └── SKILL.md
-├── scholar-causal/
-│   └── SKILL.md
-├── scholar-design/
-│   └── SKILL.md
-├── scholar-analyze/
-│   └── SKILL.md
-├── scholar-qual/
-│   └── SKILL.md
-├── scholar-write/
-│   └── SKILL.md
-├── scholar-polish/
-│   └── SKILL.md
-├── scholar-replication/
-│   └── SKILL.md
-└── scholar-think-tank/
-    └── SKILL.md
-```
+perspective-to-literature 的**下游配套工具**。将学生已完成的批判性文献综述（含假设）转化为可直接用于课题申报/开题报告的研究设计方案。
 
-**命名规范**：全小写，连字符分隔，动词开头
+### 核心约束（本科生可执行）
+
+| 标准 | 要求 |
+|------|------|
+| 可理解 | 技术门槛低，1小时内理解采集逻辑 |
+| 可操作 | 基础工具（Excel、Python基础库）即可完成 |
+| 可负担 | 零成本或接近零成本（<100元） |
+| 可验证 | 采集结果可通过公开渠道交叉验证 |
+
+### 输出格式
+
+严格遵循课题申报活页标准：
+- **3.1 [研究内容]**：主要目标、重点难点、整体框架（提纲/目录）、研究计划及其可行性
+- **3.2 [创新之处]**：学术观点创新、研究方法创新
+
+---
+
+## proposal-writing：整合材料为完整课题申报活页
+
+### 定位
+
+教学 skill 流水线的**最终输出节点**。将前序 4 个 skill 产出的分散材料整合为一份完整的课题申报活页/开题报告。
+
+### 核心方法：拼接 + 改写 + 增补
+
+| 活页章节 | 输入来源 | 处理方式 |
+|----------|----------|----------|
+| 1. 选题说明 | topic-to-idea 输出 | 概念对齐改写 |
+| 2. 选题依据 | perspective-to-literature 正文 + idea-to-perspective 理论价值 | 删除元信息，保留批判性论证 |
+| 3. 研究内容 | literature-to-design（3.1） | 直接采用 |
+| 4. 创新之处 | literature-to-design（3.2） | 直接采用 |
+| 5. 预期成果 | 新写 | 基于文献综述应用价值，200-400字略写 |
+| 6. 参考文献 | perspective-to-literature 工作参考文献 | 格式化 |
+
+### 输出约束
+
+- 总字数 ≤7000字
+- 无申请人身份信息
+- 核心概念在各章节中表述一致
 
 ---
 
 ## 注意事项
 
 - 所有 Skill 为**用户级**，在任何工作目录下均可调用
-- Skill 之间存在**调用依赖关系**（如 scholar-analyze 建议先调用 scholar-causal）
+- Skill 之间存在**调用依赖关系**，建议按流水线顺序依次调用
 - 大型任务建议**分阶段调用**，不要一次串连过多 Skill
-- 调用时请明确告知**目标期刊**（如 ASR/AJS/Demography/Social Policy & Administration），Skill 会自动调整输出格式
-- `topic-to-idea`、`idea-to-perspective`、`perspective-to-literature`、`literature-to-design` 与 `proposal-writing` 为**教学专用配套**：
-  - `topic-to-idea` 解决"从议题到合格提案"
-  - `idea-to-perspective` 解决"从合格提案到差异化视角"
-  - `perspective-to-literature` 解决"从差异化视角到批判性文献综述"
-  - `literature-to-design` 解决"从批判性文献综述到可执行的研究设计方案"
-  - `proposal-writing` 解决"从分散材料到完整课题申报活页"
+- 五个 Skill 为**教学专用配套**，解决从"议题"到"完整活页"的完整生产流程：
+  - `topic-to-idea` → "从议题到合格提案"
+  - `idea-to-perspective` → "从合格提案到差异化视角"
+  - `perspective-to-literature` → "从差异化视角到批判性文献综述"
+  - `literature-to-design` → "从批判性文献综述到可执行的研究设计方案"
+  - `proposal-writing` → "从分散材料到完整课题申报活页"
